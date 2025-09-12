@@ -25,7 +25,7 @@ We will first use web scraping to collect population density data from Census.co
 
 Finally, we will build a machine learning model to explain the causes of negative sentiment, allowing the investor to design a restaurant that meets customer needs and gains market share effectively.
 
-Note: Although we initially tried using the Python geohash library to merge Google and Yelp datasets, it did not produce reliable results. Therefore, both analyses were performed separately.
+
 
 ⚠️ Dataset Notice
 
@@ -38,3 +38,4 @@ If you want to reproduce the analysis, you can either:
 
     * Contact the repository owner to request access to the files.
 
+Note: Although we initially tried using the Python geohash library to merge Google and Yelp datasets, it did not produce reliable results. Therefore, both analyses were performed separately.
