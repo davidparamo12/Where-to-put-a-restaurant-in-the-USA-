@@ -38,7 +38,7 @@ If you want to reproduce the analysis, you can either:
 
     * Contact the repository owner to request access to the files.
 
-Note: Although we initially tried using the Python geohash library to merge Google and Yelp datasets, it did not produce reliable results. Therefore, both analyses were performed separately.
+}
 
 
 
@@ -65,8 +65,10 @@ Note: Although we initially tried using the Python geohash library to merge Goog
 ## DATASET
 
 Important note:
-To filter the data, we used the longitude and latitude variables because the State and City fields were unreliable (e.g., cities like Seattle appeared under the wrong state).
+1. To filter the data, we used the longitude and latitude variables because the State and City fields were unreliable (e.g., cities like Seattle appeared under the wrong state).
 Since longitude and latitude values come from user devices, they are much more accurate.
+
+2. Although we initially tried using the Python geohash library to merge Google and Yelp datasets into one dataset but it did not produce reliable results. The gmaps_id and yelp_id are not the same, therefore both analyses were performed separately.
 
 Data Lifecycle
 
@@ -84,7 +86,7 @@ Data Lifecycle
     * Business file (Pickle format): filtered by latitude/longitude.
     * Review file (JSON): partitioned for processing.
 
-  4. Exploratory Data Analysis (EDA)
+  4. Exploratory Data Analysis (EDA) for each dataset; Google and Yelp.
      
   5. Reducing the data to SALEM and Fast Food Category.
      
@@ -93,7 +95,11 @@ Data Lifecycle
   7. Insights
 
 
+## NOTEBOOKS
 
+The notebooks for ETL, EDA and ML are avaible in the repository. Any questions, please contact the repository owner.
+
+## MACHINE LEARNING
 
 We will focus specifically on consumer reviews from Google and Yelp located in New Jersey, the most densely populated state in the U.S.
 
@@ -101,37 +107,31 @@ We will focus specifically on consumer reviews from Google and Yelp located in N
 
 We follow the CRISP-DM methodology, which has 6 steps:
 
-Step 1 – Business Understanding
+  1. Step 1 – Business Understanding
+    Goal: Provide our client with data-driven insights to optimize their restaurant investment.
+    How: Build a competitive landscape analysis for the top restaurant categories across the 21 counties of New Jersey.
+  
+    1. Identify category weaknesses specially. 
+  
+    2. Locate counties with high market opportunities.
 
-Goal: Provide our client with data-driven insights to optimize their restaurant investment.
+  
+  2. Step 2 – Data Understanding
 
-How: Build a competitive landscape analysis for 4 restaurant categories across the 21 counties of New Jersey.
+    1. Generate a Vader Compound score using SentimentIntensityAnalyzer to classify reviews as positive, neutral, or negative.
+    2. Analyze general sentiment metrics: mean, variance, and distribution.}
+    3. Group sentiment by: 
+        * Socioeconomic level
+        * County
+        * Time (date)
+    4. Creating the variable "influencer" for Yelp dataset. 
+    5. Creating...
 
-Identify category strengths and weaknesses
+    During this step we analyze the data using distribution graphs, heatmaps and logistic regressions to understand the variables for the sentiment of a review.
 
-Locate counties with high market opportunities
+    
 
-Understand the customer segments with highest potential
 
-Build a predictive sentiment model to estimate how consumers might respond to a new restaurant
-
-Step 2 – Data Understanding
-
-Generate a Vader Compound score using SentimentIntensityAnalyzer to classify reviews as positive, neutral, or negative.
-
-Combine Google and Yelp review sentiments into a single score.
-
-Analyze general sentiment metrics: mean, variance, and distribution.
-
-Group sentiment by:
-
-Socioeconomic level
-
-County
-
-Time (date)
-
-Perform:
 
 User clustering (create “influencer” variable from Yelp)
 
