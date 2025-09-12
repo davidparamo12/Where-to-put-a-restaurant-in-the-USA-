@@ -39,3 +39,20 @@ If you want to reproduce the analysis, you can either:
     * Contact the repository owner to request access to the files.
 
 Note: Although we initially tried using the Python geohash library to merge Google and Yelp datasets, it did not produce reliable results. Therefore, both analyses were performed separately.
+
+
+
+## PROJECT STRUCTURE
+
+
+1. Introduction – The objective of the project.
+
+2. Dataset – Explanation of the dataset and its relevant variables. We will also describe the data lifecycle.
+
+3. Notebooks – Jupyter Notebook files containing all the code for the ETL and EDA processes.
+
+4. Machine Learning – Explanation of the CRISP-DM methodology applied to the project.
+
+5. Report and Visualizations – Presentation of the most relevant visualizations (the complete analysis can be found in the notebooks).
+
+6. Final Conclusions – Summary of findings addressing the objective stated in the introduction.
