@@ -38,7 +38,6 @@ If you want to reproduce the analysis, you can either:
 
     * Contact the repository owner to request access to the files.
 
-}
 
 
 
@@ -80,24 +79,28 @@ Data Lifecycle
 
   2. Google Maps Data
     * All U.S. businesses: 11 JSON files merged and filtered by latitude/longitude.
-    * New Jersey folder: 13 JSON files merged into a single Parquet file for efficient processing.
+    * New Jersey folder of the reviews: 13 JSON files merged into a single Parquet file for efficient processing.
 
   3. Yelp Data
     * Business file (Pickle format): filtered by latitude/longitude.
-    * Review file (JSON): partitioned for processing.
+    * Review file (JSON): partitioned for processing. It is the biggest file of the dataset.
+    * Tip (JSON): This will help us understand what is lacking in the food category in order to give valuable feedback to the investor.
 
-  4. Exploratory Data Analysis (EDA) for each dataset; Google and Yelp.
+  5. Exploratory Data Analysis (EDA) for each dataset; Google and Yelp.
      
-  5. Reducing the data to SALEM and Fast Food Category.
+  6. Reducing the data to SALEM and Fast Food Category. Understand why this is our goal.
      
-  6. Machine Learning
+  7. Machine Learning
      
-  7. Insights
+  8. Insights
+
 
 
 ## NOTEBOOKS
 
+
 The notebooks for ETL, EDA and ML are avaible in the repository. Any questions, please contact the repository owner.
+
 
 ## MACHINE LEARNING
 
@@ -112,43 +115,23 @@ We follow the CRISP-DM methodology, which has 6 steps:
     How: Build a competitive landscape analysis for the top restaurant categories across the 21 counties of New Jersey.
   
     1. Identify category weaknesses specially. 
-  
-    2. Locate counties with high market opportunities.
+    2. Locate counties with high market opportunities- demands from the consumers are unmet.
 
   
   2. Step 2 – Data Understanding
 
     1. Generate a Vader Compound score using SentimentIntensityAnalyzer to classify reviews as positive, neutral, or negative.
-    2. Analyze general sentiment metrics: mean, variance, and distribution.}
+    2. Analyze general sentiment metrics: mean, variance, and distribution.
     3. Group sentiment by: 
         * Socioeconomic level
         * County
         * Time (date)
-    4. Creating the variable "influencer" for Yelp dataset. 
-    5. Creating...
-
-    During this step we analyze the data using distribution graphs, heatmaps and logistic regressions to understand the variables for the sentiment of a review.
-
+    4. Creating the dummy variable "influencer" for Yelp dataset. ¿Does "influencers" have an impact in the restaurant reviews? We found three type of influencers.
+    5. Creating dummy variables from the MISC Google dataset like: delivery, drive-through, casual, breakfast, lunch, dessert, etc.
+    6. Heatmaps in order to see the correlation of the variables. It is important to note that correlation is not the same as causation. It just helps to understand in deeper sense the         data.
+    7. ¿Has sentiment evolved over time in NJ?
     
-
-
-
-User clustering (create “influencer” variable from Yelp)
-
-EDA on Yelp tips to extract keywords and create dummy variables
-
-Heatmaps to explore correlations between variables
-
-EDA Key Questions
-
-Has sentiment evolved over time in NJ?
-
-How does county median income affect sentiment?
-
-What is the link between “influencers” and restaurant sentiment?
-
-Are tips consistent? What keywords drive positive or negative reviews?
-
+  3. Step 3- Data preparation
 Step 3 – Data Preparation
 
 Clean and extract the most useful features for modeling:
