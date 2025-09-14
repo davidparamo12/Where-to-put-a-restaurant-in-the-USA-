@@ -132,6 +132,14 @@ We follow the CRISP-DM methodology, which has 6 steps:
     7. ¿Has sentiment evolved over time in NJ?
     
   3. Step 3- Data preparation
+     
+    1. The biggest problem we had managing the data was to read it because of its size (the computer used to build this project was made in a regular computer). In order to fix this, we created a filter using the latitude and longitude variable; if the row value is within the boundaries, it would be saved in the new dataframe otherwise it wouldnt. 
+    2. The data that was filtered was therfore only from restaurants of New Jersey.
+    3. The next step was to categorized the restaurants. Firstly, the whole list of restaurants where extracted and with the help of AI a dictionary was created to categorized the whole        list of restaurants.  
+    Having the business_id from NJ helped to merge only the reviews from this state.
+    3. In order to find the category of each restaurant, we used the variable 
+    the data wasnt joined into a single dataframe but instead it would read from each file and safe every row into a new data frame if the record was within New Jersey. 
+  5. 
 Step 3 – Data Preparation
 
 Clean and extract the most useful features for modeling:
