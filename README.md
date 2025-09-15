@@ -136,14 +136,14 @@ We follow the CRISP-DM methodology, which has 6 steps:
     1. The main challenge in managing the data was its large size, which made it difficult to read on a regular computer. To address this issue, a filtering process was implemented    using the latitude and longitude variables: only rows with values within the defined boundaries were kept in the new dataframe. 
     2. As a result, the filtered data contained only restaurants located in New Jersey.
     3. The next step involved categorizing the restaurants. First, the complete list of restaurants was extracted, and an AI-assisted approach was used to create a dictionary to                classify all restaurants.
-    4. Each row was then mapped to this dictionary, and restaurants marked as permanently closed were removed from the dataframe. Only the four largest categories were retained, as the         initial objective focused on areas with the highest demand.
+    4. Each row was then mapped to this dictionary, and restaurants marked as permanently closed were removed from the dataframe. Only the four largest categories were retained, as the         initial objective focused on areas within the highest demand.
     5. After removing unnecessary columns, the dataset was merged with the reviews.
-    6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA).
-    
-    Having the business_id from NJ helped to merge only the reviews from this state.
-    3. In order to find the category of each restaurant, we used the variable 
-    the data wasnt joined into a single dataframe but instead it would read from each file and safe every row into a new data frame if the record was within New Jersey. 
-  5. 
+    6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA). This is important to remove RAM usage.
+    7. After reading the new dataframe, the reviews are tockenized and the VaderSentiment analysis is used in order to get the reviews sentiment.
+    8. For the Google dataset dummies were created from the MISC variable to take out dummies such as "drive through", "takeout", "comfort food", etc. For the Yelp dataset, a large number of variables that describe the users were all used in order to create a clustering that would help define the type influencers; top influencer, middle influencer and micro influencer.
+    9. The data was partioned into the different food categories in order to analyze with ML each category.
+  
+  4. Step 4- Modeling 
 Step 3 – Data Preparation
 
 Clean and extract the most useful features for modeling:
