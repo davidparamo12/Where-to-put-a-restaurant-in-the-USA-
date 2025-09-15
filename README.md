@@ -133,9 +133,13 @@ We follow the CRISP-DM methodology, which has 6 steps:
     
   3. Step 3- Data preparation
      
-    1. The biggest problem we had managing the data was to read it because of its size (the computer used to build this project was made in a regular computer). In order to fix this, we created a filter using the latitude and longitude variable; if the row value is within the boundaries, it would be saved in the new dataframe otherwise it wouldnt. 
-    2. The data that was filtered was therfore only from restaurants of New Jersey.
-    3. The next step was to categorized the restaurants. Firstly, the whole list of restaurants where extracted and with the help of AI a dictionary was created to categorized the whole        list of restaurants.  
+    1. The main challenge in managing the data was its large size, which made it difficult to read on a regular computer. To address this issue, a filtering process was implemented    using the latitude and longitude variables: only rows with values within the defined boundaries were kept in the new dataframe. 
+    2. As a result, the filtered data contained only restaurants located in New Jersey.
+    3. The next step involved categorizing the restaurants. First, the complete list of restaurants was extracted, and an AI-assisted approach was used to create a dictionary to                classify all restaurants.
+    4. Each row was then mapped to this dictionary, and restaurants marked as permanently closed were removed from the dataframe. Only the four largest categories were retained, as the         initial objective focused on areas with the highest demand.
+    5. After removing unnecessary columns, the dataset was merged with the reviews.
+    6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA).
+    
     Having the business_id from NJ helped to merge only the reviews from this state.
     3. In order to find the category of each restaurant, we used the variable 
     the data wasnt joined into a single dataframe but instead it would read from each file and safe every row into a new data frame if the record was within New Jersey. 
