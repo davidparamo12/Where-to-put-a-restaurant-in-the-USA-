@@ -183,4 +183,17 @@ Overall, the fast food category appears to have the most issues based on the rev
 
 <img width="681" height="545" alt="image" src="https://github.com/user-attachments/assets/644f792a-91f9-44cb-b1a1-a51da6e4df67" />
 
-After puting logarithm of 
+After applying a logarithmic transformation to the user-related variables in Yelp—given their strong skewness—a clustering model was then developed to identify different types of influencers. The data showed that 3 clusters was the optimal number of clusters:
+
+<img width="574" height="449" alt="image" src="https://github.com/user-attachments/assets/5e3817d2-76de-4284-b80a-d3634adc4125" />
+
+As mentioned before; the clusters were named as top influencers, middel influencer and micro influencer.
+
+
+The Yelp dataset also shows that the Fast Food category has the biggest problem and specially in the County of Salem.  
+
+<img width="678" height="547" alt="image" src="https://github.com/user-attachments/assets/1e7685b4-747f-4270-be13-30818ed31417" />
+
+At the moment to explain 
+<img width="1620" height="1150" alt="image" src="https://github.com/user-attachments/assets/45941522-92dd-4c0e-8d8d-36ad65035eb6" />
+
