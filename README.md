@@ -153,28 +153,15 @@ We follow the CRISP-DM methodology, which has 6 steps:
 
   5. Step 5- Evaluation
 
-    1. The models evaluation used the common metrics: accuracy, precision, recall, F1-Score.
-    2. To visualize better we also used the Confusion Matrix.
-    3. ROC curve and AUC.
-    4. Cross validation
+    1. The models were evaluated using common metrics: accuracy, precision, recall, and F1-score.
+    2. To improve visualization, a confusion matrix was also used.
+    3. The ROC curve and AUC were included as well. For this evaluation, the data was converted into two classes—positive and negative—by merging the neutral class into the negative class to improve class balance.
+    4. Cross-validation was performed, ensuring that the classes were balanced during the process.
 
 
-Step 4 – Modeling
+  6. Step 6- Deployment
 
-Try multiple ML models (mostly categorical data):
+    1. For the deployment of the model it was used a FastApi aplication.
 
-Decision Trees / Random Forest – step-by-step path to positive/negative sentiment
 
-Logistic Regression – predict positive vs. negative sentiment
-
-XGBoost – ensemble of decision trees correcting each other’s errors
-
-Step 5 – Evaluation
-
-Assess if the model meets its business goal.
-
-By this stage we will have an MVP that predicts review sentiment from input variables, offering insights to design a restaurant concept with higher success probability.
-
-Step 6 – Deployment
-
-Deploy the MVP so the user can input variables (location, attributes, etc.) and obtain a predicted sentiment score for their proposed restaurant.
+## REPORT AND VISUALIZATION
