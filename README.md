@@ -141,12 +141,22 @@ We follow the CRISP-DM methodology, which has 6 steps:
     6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA).This step helps reduce RAM usage.
     7. After loading the new DataFrame, the reviews were tokenized, and the VADER Sentiment Analysis tool was applied to determine the sentiment of each review.
     8. For the Google dataset, dummy variables were created from the MISC column to capture features such as "drive-through," "takeout," "comfort food," and others. For the Yelp dataset, a wide range of user-related variables was used to perform clustering aimed at identifying types of influencers: top influencers, mid-level influencers, and micro-influencers.
-    9. Finally, the data was partitioned by food category to allow machine learning models to analyze each category separately.
+    9. Finally, the data was partitioned by food category to allow machine learning models to analyze each category separately. Nevertheless, we only focused in fast food as it was the category where it showed a demand unmet.
   
   4. Step 4- Modeling
      
-    1. From the data was created a Heatmap, just as an initial exploration. As it is known, correlation doesnt mean causation. 
-    2. Due to the nature of the variables that are mostly discret
+    1. A heatmap was created as an initial exploratory step. As is well known, correlation does not imply causation.
+    2. Because most of the variables are discrete rather than continuous, the modeling approach focused on algorithms such as logistic regression, decision trees, and similar methods like XGBoost and Random Forest.
+    3. After running several models, it became evident that there was a major issue with precision, especially for the negative class. This occurred because the number of negative and neutral samples was much lower than the number of positive samples. In some cases, the model predicted only positive outcomes yet still achieved a relatively high F1-score. This was due to the class imbalance between positive, neutral, and negative values.
+    4. To address this issue, the SMOTE resampling technique was applied, and the models were also trained using class_weight="balanced".
+    5. These adjustments improved precision; however, the variables that explained sentiment remained limited.
+
+  5. Step 5- Evaluation
+
+    1. The models evaluation used the common metrics: accuracy, precision, recall, F1-Score.
+    2. To visualize better we also used the Confusion Matrix.
+    3. ROC curve and AUC.
+    4. Cross validation
 
 
 Step 4 – Modeling
