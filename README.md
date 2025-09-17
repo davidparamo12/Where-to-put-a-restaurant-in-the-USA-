@@ -138,21 +138,16 @@ We follow the CRISP-DM methodology, which has 6 steps:
     3. The next step involved categorizing the restaurants. First, the complete list of restaurants was extracted, and an AI-assisted approach was used to create a dictionary to                classify all restaurants.
     4. Each row was then mapped to this dictionary, and restaurants marked as permanently closed were removed from the dataframe. Only the four largest categories were retained, as the         initial objective focused on areas within the highest demand.
     5. After removing unnecessary columns, the dataset was merged with the reviews.
-    6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA). This is important to remove RAM usage.
-    7. After reading the new dataframe, the reviews are tockenized and the VaderSentiment analysis is used in order to get the reviews sentiment.
-    8. For the Google dataset dummies were created from the MISC variable to take out dummies such as "drive through", "takeout", "comfort food", etc. For the Yelp dataset, a large number of variables that describe the users were all used in order to create a clustering that would help define the type influencers; top influencer, middle influencer and micro influencer.
-    9. The data was partioned into the different food categories in order to analyze with ML each category.
+    6. The final dataframe was saved in parquet format to proceed with the exploratory data analysis (EDA).This step helps reduce RAM usage.
+    7. After loading the new DataFrame, the reviews were tokenized, and the VADER Sentiment Analysis tool was applied to determine the sentiment of each review.
+    8. For the Google dataset, dummy variables were created from the MISC column to capture features such as "drive-through," "takeout," "comfort food," and others. For the Yelp dataset, a wide range of user-related variables was used to perform clustering aimed at identifying types of influencers: top influencers, mid-level influencers, and micro-influencers.
+    9. Finally, the data was partitioned by food category to allow machine learning models to analyze each category separately.
   
-  4. Step 4- Modeling 
-Step 3 – Data Preparation
+  4. Step 4- Modeling
+     
+    1. From the data was created a Heatmap, just as an initial exploration. As it is known, correlation doesnt mean causation. 
+    2. Due to the nature of the variables that are mostly discret
 
-Clean and extract the most useful features for modeling:
-
-Business hours (24/7 or not)
-
-Attributes (parking, drive-through, etc.)
-
-Star ratings (expected vs. actual satisfaction)
 
 Step 4 – Modeling
 
