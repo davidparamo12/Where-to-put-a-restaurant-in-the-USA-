@@ -194,6 +194,46 @@ The Yelp dataset also shows that the Fast Food category has the biggest problem 
 
 <img width="678" height="547" alt="image" src="https://github.com/user-attachments/assets/1e7685b4-747f-4270-be13-30818ed31417" />
 
-At the moment to explain 
+
+As an initial step we created a Heatmap of the dummies. As a first glance, it doesn´t show much correlation with the sentiment.
+
 <img width="1620" height="1150" alt="image" src="https://github.com/user-attachments/assets/45941522-92dd-4c0e-8d8d-36ad65035eb6" />
+
+
+The initial decision tree classifier exhibited poor performance in identifying negative instances, despite using the stratify parameter during the train-test split to preserve class distribution.
+
+<img width="508" height="226" alt="image" src="https://github.com/user-attachments/assets/84c7924f-bf7c-42a3-b6e3-b5a09ee1062b" />
+
+After combining neutral reviews with the negative class—thus leaving only positive and negative reviews—the ROC analysis was conducted.
+
+<img width="691" height="548" alt="image" src="https://github.com/user-attachments/assets/c2b04070-31b6-4b15-a80d-38ca361c54c6" />
+
+Creating the same tree but only with the two variables that have the highest correlation. ¿Would this generate the same results? Actually it improved the result.
+
+<img width="470" height="185" alt="image" src="https://github.com/user-attachments/assets/043efa74-2d4d-4464-a342-124c501edf12" />
+
+After just using two variables: rating and average_rating the accuracy of the model increased a lot to understand the sentiment. After using Random Forest, the results are almost the same, with an accuracy of 81.43%:
+
+<img width="520" height="455" alt="image" src="https://github.com/user-attachments/assets/b9117243-0214-4741-a499-a34ab15c779c" />
+
+The model continues to show a poor performance for negative values. Therefore, its time to create a resamplin with SMOTE. The results after using all the dummy variables wasn´t enough to improve the efficiency of the model:
+
+<img width="248" height="137" alt="image" src="https://github.com/user-attachments/assets/b7e87bde-e451-4dd6-8197-35cc1e1ccb9c" />
+
+<img width="485" height="197" alt="image" src="https://github.com/user-attachments/assets/5c9d16a4-bad3-4eb8-846a-8234d1c6bc1e" />
+
+Since no dummy variable other than rating could help explain the sentiment of the reviews, the dataset from the tip file was used to extract the most frequently repeated words of the negative reviews. 
+
+<img width="1110" height="335" alt="image" src="https://github.com/user-attachments/assets/f44f40ba-b46f-4b85-b4ee-2f55ab322174" />
+
+
+For the YELP dataset, the Heatmap shows the same: the biggest correlation with the sentiment is the ratings.
+
+<img width="1589" height="1119" alt="image" src="https://github.com/user-attachments/assets/b00151bc-b196-475d-9b8f-6e5f0bdff2c9" />
+
+
+
+
+
+
 
