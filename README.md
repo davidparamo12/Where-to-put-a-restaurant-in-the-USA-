@@ -231,6 +231,8 @@ For the YELP dataset, the Heatmap shows the same: the biggest correlation with t
 
 <img width="1589" height="1119" alt="image" src="https://github.com/user-attachments/assets/b00151bc-b196-475d-9b8f-6e5f0bdff2c9" />
 
+For this dataset, the first model used was a Logistic Regression with balanced class weights. However, the results were very poor at predicting negative reviews. For this reason the dataset was put into negative and positive reviews only and the evaluation of the model improved considerably.
+
 
 
 
