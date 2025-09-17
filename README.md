@@ -165,3 +165,8 @@ We follow the CRISP-DM methodology, which has 6 steps:
 
 
 ## REPORT AND VISUALIZATION
+
+The data shows that the District of Columbia is the most dense place of the USA. Nevertheless, the District of Columbia is not a state. Therefore, the most dense state is New Jersey. is the most dense state of the USA.
+
+
+<img width="820" height="492" alt="image" src="https://github.com/user-attachments/assets/73daf4d6-4dca-4e95-aaf8-f4e5736ec9cd" />
