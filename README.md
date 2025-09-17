@@ -172,12 +172,15 @@ After analyzing the data in NJ (New Jersey), this are the top food categories.
 
 <img width="820" height="492" alt="image" src="https://github.com/user-attachments/assets/73daf4d6-4dca-4e95-aaf8-f4e5736ec9cd" />
 
+
 After grouping each category by sentiment, the data showed that the County with the highest demand unmet was FAST FOOD- with the Google data and Yelp data. 
 
 In the Google dataset, the Salem County has 0.27 in the vader sentiment, the lowest of all the food county and food categories. 
+
 <img width="684" height="545" alt="image" src="https://github.com/user-attachments/assets/4f4d462f-abe7-4f02-9928-871d7a264609" />
 
-In overall, the fast food category is the category having the most problems according to the reviews and its sentiment. For instance, Pizza and Pasta and the others have less variance and have higher ratings than Fast Food.
+Overall, the fast food category appears to have the most issues based on the reviews and their sentiment. In contrast, categories like Pizza and Pasta show less variation and generally receive higher ratings than Fast Food.
+
 <img width="681" height="545" alt="image" src="https://github.com/user-attachments/assets/644f792a-91f9-44cb-b1a1-a51da6e4df67" />
 
-
+After puting logarithm of 
