@@ -235,7 +235,7 @@ For this dataset, the first model tested was a Logistic Regression with balanced
 
 <img width="479" height="171" alt="image" src="https://github.com/user-attachments/assets/abed731d-3b63-43fe-a9e0-a85cb3c78eeb" />
 
-As a next step, a tree decision classifier was built only using -1 and 1 that kept improving the model. Nevertheless, the variables that are more relevant are only three: stars 
+As a next step, a tree decision classifier was built only using -1 and 1 that kept improving the model. Nevertheless, the variables that are more relevant are only three: stars from the business with a weight (94%), stars from the reviews (2.9%) and the average of stars (2.4%). Basically the reviews are being explained only by the variable of the stars of the restaurant.
 
 <img width="439" height="188" alt="image" src="https://github.com/user-attachments/assets/64e7d30a-52bc-4ab7-9225-44f27d9d129c" />
 
