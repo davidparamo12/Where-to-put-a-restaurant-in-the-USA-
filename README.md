@@ -231,7 +231,14 @@ For the YELP dataset, the Heatmap shows the same: the biggest correlation with t
 
 <img width="1589" height="1119" alt="image" src="https://github.com/user-attachments/assets/b00151bc-b196-475d-9b8f-6e5f0bdff2c9" />
 
-For this dataset, the first model used was a Logistic Regression with balanced class weights. However, the results were very poor at predicting negative reviews. For this reason the dataset was put into negative and positive reviews only and the evaluation of the model improved considerably.
+For this dataset, the first model tested was a Logistic Regression with balanced class weights, which assigns higher weights to the negative class in an attempt to improve its predictive performance on negative cases. However, the results were very poor. As a next step, a RandomOverSampler was applied to balance the class distribution, with the expectation of improving the model’s performance — but this approach was also unsuccessful. For this reason, the negative and neutral reviews were merged into a single class, which significantly improved the model’s performance.
+
+<img width="479" height="171" alt="image" src="https://github.com/user-attachments/assets/abed731d-3b63-43fe-a9e0-a85cb3c78eeb" />
+
+As a next step, a tree decision classifier was built only using -1 and 1 that kept improving the model. Nevertheless, the variables that are more relevant are only three: stars 
+
+<img width="439" height="188" alt="image" src="https://github.com/user-attachments/assets/64e7d30a-52bc-4ab7-9225-44f27d9d129c" />
+
 
 
 
