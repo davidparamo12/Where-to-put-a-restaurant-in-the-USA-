@@ -235,9 +235,16 @@ For this dataset, the first model tested was a Logistic Regression with balanced
 
 <img width="479" height="171" alt="image" src="https://github.com/user-attachments/assets/abed731d-3b63-43fe-a9e0-a85cb3c78eeb" />
 
-As a next step, a tree decision classifier was built only using -1 and 1 that kept improving the model. Nevertheless, the variables that are more relevant are only three: stars from the business with a weight (94%), stars from the reviews (2.9%) and the average of stars (2.4%). Basically the reviews are being explained only by the variable of the stars of the restaurant.
+As a next step, a tree decision classifier was built only using -1 and 1 that kept improving the model. 
 
 <img width="439" height="188" alt="image" src="https://github.com/user-attachments/assets/64e7d30a-52bc-4ab7-9225-44f27d9d129c" />
+
+Nevertheless, only three variables showed notable relevance: business star ratings (94%), review star ratings (2.9%), and average star ratings (2.4%). In other words, the reviews were essentially being explained almost entirely by the restaurant’s star rating.
+
+The research then continued by removing these three dominant variables. Interestingly, the results became more intuitive for the investor while maintaining a high accuracy of 83%. In this new setup, the most influential variables were the number of years the user has been on Yelp (“yelping_years”) with 54% of the weight, the median home value with 23.6%, and whether the user is a micro-influencer with 12.9%.
+
+<img width="269" height="130" alt="image" src="https://github.com/user-attachments/assets/00254209-8734-4eee-83fc-86841500d919" />
+
 
 
 
